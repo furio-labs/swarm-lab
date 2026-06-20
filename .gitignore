@@ -1,0 +1,38 @@
+# ── Business-Case Research Swarm — distributable template ──
+# Track the ENGINE (.claude/**, CLAUDE.md, README.md, wiki/, the *.template.md
+# scaffolds, and the blank STATUS.md board). Ignore everything a research RUN
+# generates so each user starts clean and produces their own case.
+
+# ── Per-run research outputs (docs/business-model) ────────────────
+# The filled-in venture context + live progress board
+# (keep only the *.template.md scaffolds)
+docs/business-model/00-CONTEXT.md
+docs/business-model/STATUS.md
+
+# Builder deliverables + red-team critiques (ws1.md … ws11.md, *.challenge.md)
+docs/business-model/ws*.md
+docs/business-model/*.challenge.md
+
+# Measured token ledgers + run documentation (written by hooks)
+docs/business-model/TOKENS.md
+docs/business-model/TOKENS.jsonl
+docs/business-model/TOKENS-SUMMARY.md
+docs/business-model/RUN-LOG.md
+
+# Capstone publication outputs
+docs/business-model/WHITE-PAPER.md
+docs/business-model/SUBSTACK-POST.md
+
+# ── Local / personal Claude Code config (never distribute) ────────
+.claude/settings.local.json
+.claude/*.local.json
+.claude/.credentials.json
+
+# ── Tool caches (GitNexus / Serena) — local-only index state ──────
+.gitnexus/
+.serena/
+
+# ── OS / editor / runtime noise ───────────────────────────────────
+.DS_Store
+*.log
+node_modules/

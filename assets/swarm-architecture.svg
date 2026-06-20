@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Geist, system-ui, -apple-system, sans-serif" role="img" aria-label="The build, challenge, revise swarm — architecture diagram">
+  <defs>
+    <radialGradient id="bg" cx="32%" cy="0%" r="120%">
+      <stop offset="0%" stop-color="#241038"/>
+      <stop offset="45%" stop-color="#180c28"/>
+      <stop offset="100%" stop-color="#0e0719"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#26163b"/>
+      <stop offset="100%" stop-color="#1a0f2c"/>
+    </linearGradient>
+    <linearGradient id="cardGate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#311640"/>
+      <stop offset="100%" stop-color="#1d1030"/>
+    </linearGradient>
+    <linearGradient id="plumBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b06fd0"/>
+      <stop offset="100%" stop-color="#6e2d8f"/>
+    </linearGradient>
+    <linearGradient id="mintBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dff9e"/>
+      <stop offset="100%" stop-color="#39c97a"/>
+    </linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#ffffff" opacity="0.04"/>
+    </pattern>
+    <filter id="cardSh" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#6e2d8f" flood-opacity="0.40"/>
+    </filter>
+    <filter id="mintGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="aMauve" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#b06fd0"/>
+    </marker>
+    <marker id="aMint" markerWidth="10" markerHeight="10" refX="7.5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7dff9e"/>
+    </marker>
+    <marker id="aRed" markerWidth="10" markerHeight="10" refX="7.5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f2566a"/>
+    </marker>
+  </defs>
+
+  <!-- ground -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#dots)"/>
+  <rect x="0.5" y="0.5" width="1279" height="719" rx="0" fill="none" stroke="#b06fd0" stroke-opacity="0.14"/>
+
+  <!-- ============ HEADER ============ -->
+  <text x="56" y="62" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" letter-spacing="0.30em" fill="#b06fd0">FURIO LABS · CLAUDE RESEARCHER</text>
+  <text x="56" y="116" font-size="42" font-weight="600" fill="#fafafa">Build. <tspan font-family="'Instrument Serif', Georgia, serif" font-style="italic" font-weight="400" font-size="46" fill="#cf9ae8">Challenge.</tspan> Revise.</text>
+  <text x="56" y="150" font-family="'Geist Mono', ui-monospace, monospace" font-size="13" fill="#a892bd">Specialists build the case · a standing skeptic tries to kill it</text>
+
+  <!-- header legend (primes the loop colors) -->
+  <g font-family="'Geist Mono', ui-monospace, monospace" font-size="11.5" letter-spacing="0.10em">
+    <circle cx="1086" cy="58" r="4.5" fill="#7dff9e" filter="url(#mintGlow)"/>
+    <text x="1098" y="62" fill="#cfeedd">PASS</text>
+    <circle cx="1158" cy="58" r="4.5" fill="#f2566a"/>
+    <text x="1170" y="62" fill="#f3c0c7">FAIL</text>
+  </g>
+
+  <!-- ============ FAIL / REVISE LOOP (above spine) ============ -->
+  <path d="M 866 190 C 836 150, 718 150, 690 188" fill="none" stroke="#f2566a" stroke-width="2" stroke-dasharray="2 5" stroke-linecap="round" marker-end="url(#aRed)" opacity="0.92"/>
+  <text x="778" y="146" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.12em" fill="#f2566a">FAIL · revise in place</text>
+
+  <!-- ============ SPINE CONNECTORS ============ -->
+  <g stroke-width="2.2" fill="none">
+    <line x1="254" y1="254" x2="295" y2="254" stroke="#b06fd0" marker-end="url(#aMauve)"/>
+    <line x1="497" y1="254" x2="538" y2="254" stroke="#b06fd0" marker-end="url(#aMauve)"/>
+    <line x1="740" y1="254" x2="781" y2="254" stroke="#b06fd0" marker-end="url(#aMauve)"/>
+    <line x1="983" y1="254" x2="1024" y2="254" stroke="#7dff9e" marker-end="url(#aMint)"/>
+  </g>
+  <text x="1004" y="242" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="10" letter-spacing="0.12em" fill="#7dff9e">PASS</text>
+
+  <!-- ============ SPINE CARDS ============ -->
+  <!-- 01 Context -->
+  <g filter="url(#cardSh)">
+    <rect x="56" y="188" width="196" height="132" rx="14" fill="url(#card)" stroke="#b06fd0" stroke-opacity="0.22"/>
+  </g>
+  <rect x="68" y="204" width="4" height="100" rx="2" fill="url(#plumBar)"/>
+  <text x="84" y="220" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.20em" fill="#b06fd0">01</text>
+  <text x="84" y="252" font-size="16" font-weight="600" fill="#fafafa">Context</text>
+  <text x="84" y="272" font-family="'Geist Mono', ui-monospace, monospace" font-size="10" fill="#9a86b3">one data file</text>
+  <text x="84" y="302" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" fill="#c79ae0">00-CONTEXT.md</text>
+
+  <!-- 02 Orchestrator -->
+  <g filter="url(#cardSh)">
+    <rect x="299" y="188" width="196" height="132" rx="14" fill="url(#card)" stroke="#b06fd0" stroke-opacity="0.22"/>
+  </g>
+  <rect x="311" y="204" width="4" height="100" rx="2" fill="url(#plumBar)"/>
+  <text x="327" y="220" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.20em" fill="#b06fd0">02</text>
+  <text x="327" y="252" font-size="16" font-weight="600" fill="#fafafa">Orchestrator</text>
+  <text x="327" y="272" font-family="'Geist Mono', ui-monospace, monospace" font-size="10" fill="#9a86b3">sequences the waves</text>
+  <text x="327" y="302" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" fill="#c79ae0">CLAUDE.md</text>
+
+  <!-- 03 Builders -->
+  <g filter="url(#cardSh)">
+    <rect x="542" y="188" width="196" height="132" rx="14" fill="url(#card)" stroke="#b06fd0" stroke-opacity="0.22"/>
+  </g>
+  <rect x="554" y="204" width="4" height="100" rx="2" fill="url(#plumBar)"/>
+  <text x="570" y="220" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.20em" fill="#b06fd0">03</text>
+  <text x="570" y="252" font-size="16" font-weight="600" fill="#fafafa">Specialists</text>
+  <text x="570" y="272" font-family="'Geist Mono', ui-monospace, monospace" font-size="10" fill="#9a86b3">11 workstream builders</text>
+  <text x="570" y="302" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" fill="#c79ae0">&lt;ws&gt;.md</text>
+
+  <!-- 04 Red-team (the gate) -->
+  <g filter="url(#cardSh)">
+    <rect x="785" y="188" width="196" height="132" rx="14" fill="url(#cardGate)" stroke="#f2566a" stroke-opacity="0.42"/>
+  </g>
+  <rect x="797" y="204" width="4" height="100" rx="2" fill="#f2566a"/>
+  <text x="813" y="220" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.20em" fill="#f2566a">04</text>
+  <text x="813" y="252" font-size="16" font-weight="600" fill="#fafafa">Red-team</text>
+  <text x="813" y="272" font-family="'Geist Mono', ui-monospace, monospace" font-size="10" fill="#cfa3ad">standing skeptic · binary</text>
+  <text x="813" y="302" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" fill="#e7b0bb">&lt;ws&gt;.challenge.md</text>
+
+  <!-- 05 Publication -->
+  <g filter="url(#cardSh)">
+    <rect x="1028" y="188" width="196" height="132" rx="14" fill="url(#card)" stroke="#7dff9e" stroke-opacity="0.30"/>
+  </g>
+  <rect x="1040" y="204" width="4" height="100" rx="2" fill="url(#mintBar)"/>
+  <text x="1056" y="220" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.20em" fill="#7dff9e">05</text>
+  <text x="1056" y="252" font-size="16" font-weight="600" fill="#fafafa">Publication</text>
+  <text x="1056" y="272" font-family="'Geist Mono', ui-monospace, monospace" font-size="10" fill="#9a86b3">capstone, measured</text>
+  <text x="1056" y="302" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" fill="#a9ecc1">WHITE-PAPER.md</text>
+
+  <!-- ============ DEPENDENCY WAVES BAND ============ -->
+  <rect x="56" y="356" width="1168" height="122" rx="16" fill="#170c26" stroke="#ffffff" stroke-opacity="0.06"/>
+  <text x="78" y="386" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.20em" fill="#b06fd0">DEPENDENCY WAVES</text>
+  <text x="1202" y="386" text-anchor="end" font-family="'Geist Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="0.06em" fill="#cf8b96">red-team challenges every wave</text>
+
+  <!-- wave blocks -->
+  <g>
+    <rect x="78" y="398" width="258" height="64" rx="10" fill="#23133a" stroke="#b06fd0" stroke-opacity="0.20"/>
+    <text x="94" y="421" font-family="'Geist Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="0.18em" fill="#b06fd0">WAVE 1</text>
+    <text x="94" y="442" font-family="'Geist Mono', ui-monospace, monospace" font-size="12.5" fill="#e4d6f0">ws1 · ws2</text>
+    <text x="94" y="456" font-family="'Geist Mono', ui-monospace, monospace" font-size="9.5" fill="#8a7a9b">market · icp</text>
+
+    <rect x="368" y="398" width="258" height="64" rx="10" fill="#23133a" stroke="#b06fd0" stroke-opacity="0.20"/>
+    <text x="384" y="421" font-family="'Geist Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="0.18em" fill="#b06fd0">WAVE 2</text>
+    <text x="384" y="442" font-family="'Geist Mono', ui-monospace, monospace" font-size="12.5" fill="#e4d6f0">ws3 · ws4 · ws5</text>
+    <text x="384" y="456" font-family="'Geist Mono', ui-monospace, monospace" font-size="9.5" fill="#8a7a9b">moat · rivals · unit-econ</text>
+
+    <rect x="658" y="398" width="258" height="64" rx="10" fill="#23133a" stroke="#b06fd0" stroke-opacity="0.20"/>
+    <text x="674" y="421" font-family="'Geist Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="0.18em" fill="#b06fd0">WAVE 3</text>
+    <text x="674" y="442" font-family="'Geist Mono', ui-monospace, monospace" font-size="12.5" fill="#e4d6f0">ws6 · ws7 · ws9</text>
+    <text x="674" y="456" font-family="'Geist Mono', ui-monospace, monospace" font-size="9.5" fill="#8a7a9b">gtm · legal · team</text>
+
+    <rect x="948" y="398" width="258" height="64" rx="10" fill="#23133a" stroke="#b06fd0" stroke-opacity="0.20"/>
+    <text x="964" y="421" font-family="'Geist Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="0.18em" fill="#b06fd0">WAVE 4</text>
+    <text x="964" y="442" font-family="'Geist Mono', ui-monospace, monospace" font-size="12.5" fill="#e4d6f0">ws8 · ws11</text>
+    <text x="964" y="456" font-family="'Geist Mono', ui-monospace, monospace" font-size="9.5" fill="#8a7a9b">financials · narrative</text>
+  </g>
+  <!-- wave gates -->
+  <g font-family="'Geist Mono', ui-monospace, monospace" font-size="15" fill="#7a5e92">
+    <text x="352" y="435" text-anchor="middle">→</text>
+    <text x="642" y="435" text-anchor="middle">→</text>
+    <text x="932" y="435" text-anchor="middle">→</text>
+  </g>
+
+  <!-- ============ INSTRUMENTATION RAIL ============ -->
+  <rect x="56" y="506" width="1168" height="82" rx="14" fill="#130a1f" stroke="#7dff9e" stroke-opacity="0.14"/>
+  <circle cx="80" cy="540" r="4.5" fill="#7dff9e" filter="url(#mintGlow)"/>
+  <text x="94" y="535" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.18em" fill="#7dff9e">INSTRUMENTATION</text>
+  <text x="94" y="556" font-family="'Geist Mono', ui-monospace, monospace" font-size="10" fill="#8a7a9b">measured tokens — never self-reported</text>
+
+  <g font-family="'Geist Mono', ui-monospace, monospace" font-size="11.5" fill="#cdbfe0">
+    <text x="372" y="551">SubagentStop hook</text>
+    <text x="520" y="551" fill="#7a5e92">→</text>
+    <text x="540" y="551">parses each transcript</text>
+    <text x="712" y="551" fill="#7a5e92">→</text>
+    <text x="732" y="551" fill="#a9ecc1">TOKENS.md</text>
+  </g>
+  <rect x="1058" y="524" width="148" height="40" rx="10" fill="#15241c" stroke="#7dff9e" stroke-opacity="0.28"/>
+  <text x="1132" y="549" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.16em" fill="#7dff9e">MEASURED ✓</text>
+
+  <!-- ============ FOOTER ============ -->
+  <line x1="56" y1="624" x2="1224" y2="624" stroke="#ffffff" stroke-opacity="0.07"/>
+  <text x="56" y="666" font-family="'Instrument Serif', Georgia, serif" font-style="italic" font-size="20" fill="#e7d9f2">Nothing is done until the red-team has tried to kill it — and failed.</text>
+  <g>
+    <circle cx="1108" cy="660" r="4" fill="#7dff9e"/>
+    <text x="1224" y="666" text-anchor="end" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" letter-spacing="0.10em" fill="#b06fd0">furiolabs.com</text>
+  </g>
+</svg>
