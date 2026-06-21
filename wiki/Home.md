@@ -1,4 +1,6 @@
-# Claude Researcher — Wiki
+# Swarm Foundry — Wiki
+
+> Part of the **Market Swarm** product — an open-source lab for agent-swarm experimentation.
 
 A drop-in Claude Code swarm that **builds a VC-grade business case for any venture and then
 tries to kill it.** You supply the idea and the facts in one data file
@@ -9,7 +11,7 @@ standing skeptic red-teams every piece until it survives or carries a logged reb
 
 ```mermaid
 flowchart TD
-    A["Fill 00-CONTEXT.md<br/>/new-case or by hand"] --> G{"/gate-check<br/>all Human Gates answered?"}
+    A["/new-case<br/>interview + web research → 00-CONTEXT.md"] --> G{"/gate-check<br/>all Human Gates answered?"}
     G -->|no| A
     G -->|yes| W1["/run-wave 1<br/>ws1 market · ws2 icp"]
     W1 -->|prior wave PASS| W2["/run-wave 2<br/>ws3 moat · ws4 competition · ws5 unit-econ"]
@@ -25,8 +27,8 @@ flowchart TD
 
 ## Quick start
 1. Copy the **contents** of this bundle into the root of a git repo.
-2. Run **`/new-case`** (interview + web research → drafts `00-CONTEXT.md` for your confirmation),
-   or fill `docs/business-model/00-CONTEXT.template.md` by hand.
+2. Run **`/new-case`** (interview + web research → drafts `00-CONTEXT.md` for your confirmation).
+   It is the only supported way to start a case.
 3. `/gate-check` → `/run-wave 1…4` → `/redteam` → `/publish`.
 
 ## The one rule

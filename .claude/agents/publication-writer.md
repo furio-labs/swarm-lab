@@ -15,10 +15,12 @@ Write two files:
    REAL numbers from TOKENS-SUMMARY.md** (per-agent table from TOKENS.md); results;
    limitations; honesty ledger.
 
-2. `docs/business-model/SUBSTACK-POST.md` — first-person operator narrative. Use the pivots in
-   RUN-LOG.md as the arc; the lesson is "use AI as an adversary, not a cheerleader"; open with
-   the real measured cost as a hook. Plainspoken, anti-hype, short paragraphs. (If a voice/style
-   skill is installed in this project, apply it.)
+2. `docs/business-model/SUBSTACK-POST.md` — first-person operator narrative. Take its argument
+   from the optional `publication_thesis` slot in `00-CONTEXT.md` and its style from the optional
+   `publication_voice` slot. If either is unset, default to a neutral, descriptive account that
+   reports what the run actually showed without arguing a predetermined lesson — never impose an
+   opinion the founder did not supply. Use the pivots in RUN-LOG.md as the arc and open with the
+   real measured cost as a hook. (If a voice/style skill is installed in this project, apply it.)
 
 HARD RULES:
 - Use ONLY measured numbers from TOKENS.md / TOKENS-SUMMARY.md. If a figure is absent, write

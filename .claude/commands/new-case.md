@@ -7,6 +7,12 @@ Bootstrap `docs/business-model/00-CONTEXT.md` for a new business case. You do th
 If `docs/business-model/00-CONTEXT.md` already exists and has real content (no `<FILL>` slots),
 STOP and ask before overwriting.
 
+**Reset the per-case ledgers first.** Because this starts a *new* case, clear the stale
+instrumentation so token consumption is measured from zero: delete any existing
+`docs/business-model/TOKENS.md`, `TOKENS.jsonl`, `TOKENS-SUMMARY.md`, and `RUN-LOG.md` (all
+gitignored; the hooks recreate them as the run proceeds). Do this ONLY for a genuinely new case —
+never mid-case, since the ledger is cumulative across sessions within one case.
+
 Steps:
 1. **Interview the founder** for the domain frame. Ask in a few compact batches, not one slot at
    a time. Collect: the business in one line; the wedge and what the commodity in this space is;
