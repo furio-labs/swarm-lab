@@ -48,7 +48,7 @@
   <rect x="0.5" y="0.5" width="1279" height="719" rx="0" fill="none" stroke="#b06fd0" stroke-opacity="0.14"/>
 
   <!-- ============ HEADER ============ -->
-  <text x="56" y="62" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" letter-spacing="0.30em" fill="#b06fd0">FURIO LABS · CLAUDE RESEARCHER</text>
+  <text x="56" y="62" font-family="'Geist Mono', ui-monospace, monospace" font-size="12" letter-spacing="0.30em" fill="#b06fd0">FURIO LABS · SWARM FOUNDRY</text>
   <text x="56" y="116" font-size="42" font-weight="600" fill="#fafafa">Build. <tspan font-family="'Instrument Serif', Georgia, serif" font-style="italic" font-weight="400" font-size="46" fill="#cf9ae8">Challenge.</tspan> Revise.</text>
   <text x="56" y="150" font-family="'Geist Mono', ui-monospace, monospace" font-size="13" fill="#a892bd">Specialists build the case · a standing skeptic tries to kill it</text>
 
@@ -101,7 +101,7 @@
   <rect x="554" y="204" width="4" height="100" rx="2" fill="url(#plumBar)"/>
   <text x="570" y="220" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.20em" fill="#b06fd0">03</text>
   <text x="570" y="252" font-size="16" font-weight="600" fill="#fafafa">Specialists</text>
-  <text x="570" y="272" font-family="'Geist Mono', ui-monospace, monospace" font-size="10" fill="#9a86b3">11 workstream builders</text>
+  <text x="570" y="272" font-family="'Geist Mono', ui-monospace, monospace" font-size="10" fill="#9a86b3">10 workstream builders</text>
   <text x="570" y="302" font-family="'Geist Mono', ui-monospace, monospace" font-size="11" fill="#c79ae0">&lt;ws&gt;.md</text>
 
   <!-- 04 Red-team (the gate) -->

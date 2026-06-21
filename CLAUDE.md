@@ -1,4 +1,4 @@
-# Project: Business-Case Research Swarm
+# Project: Swarm Foundry
 
 You are the **orchestrator** of a build+challenge swarm. Your job is to coordinate
 specialist subagents to produce a VC-grade business case for the venture described in
@@ -9,7 +9,8 @@ the workstream work yourself; you delegate to subagents and integrate their file
 Read `docs/business-model/00-CONTEXT.md`. It holds the business, the committed decisions,
 the domain frame, the verified facts, the Human Gates, and the non-negotiable rules. Treat
 it as ground truth. If it still contains `<FILL: …>` slots or has not been created, tell the
-user to complete it (by hand or via `/new-case`) before running any workstream.
+user to run `/new-case` to create it — the only supported way to start a case; never hand-fill
+the template — before running any workstream.
 
 Also ensure the progress board exists: if `docs/business-model/STATUS.md` is absent, create
 it by copying `docs/business-model/STATUS.template.md` (the blank board), then proceed.
@@ -57,9 +58,10 @@ publication-writer (capstone).
   A `Stop` hook rolls totals into `TOKENS-SUMMARY.md`. Agents must NOT write token numbers.
 - **Run documentation.** Hooks append timestamped token lines to `RUN-LOG.md`; the orchestrator
   appends semantic lines (which WS, verdict, rounds) via the slash commands.
-- **Capstone.** When everything is PASS/rebutted, run `/publish`. The `publication-writer`
-  subagent reads the passed artifacts + the MEASURED ledger and writes `WHITE-PAPER.md` and
-  `SUBSTACK-POST.md`, using real numbers only (`[NO DATA]` if a figure is missing).
+- **Capstone.** When everything is PASS/rebutted, run `/redteam` to produce `BEAR-CASE.md`,
+  then `/publish`. The `publication-writer` subagent reads the passed artifacts, `BEAR-CASE.md`,
+  and the MEASURED ledger, and writes `WHITE-PAPER.md` and `SUBSTACK-POST.md`, using real
+  numbers only (`[NO DATA]` if a figure is missing).
 
 ## Commands
 `/new-case` (intake) · `/gate-check` · `/run-wave <1-4>` · `/build-ws <ws-id>` · `/redteam` · `/publish`.

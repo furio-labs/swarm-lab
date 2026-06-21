@@ -1,10 +1,10 @@
 # 00 — Shared Context (ground truth for all agents)
 
-> **This is the ONE file you complete.** Every agent reads it first and takes its
-> domain from the slots below. Fill every `<FILL: …>` slot, then delete this quote block.
-> Two ways to fill it: (a) edit by hand, or (b) run `/new-case`, which interviews you,
-> web-researches the facts, and drafts this file for you to confirm.
-> Rename this file to `00-CONTEXT.md` once you start (agents read `00-CONTEXT.md`).
+> **This is the field guide, not a worksheet.** It shows every slot the agents read, but you do
+> not fill it in by hand. Start a case with `/new-case`: it interviews you, web-researches the
+> facts, and drafts a separate `docs/business-model/00-CONTEXT.md` from these slots for you to
+> confirm. `/new-case` is the only supported way to start a case (it also resets the per-case
+> token ledger). Leave this template file as-is.
 
 ## The business (committed decisions)
 - **What it is:** <FILL: one or two sentences — the company/product in plain language.>
@@ -64,3 +64,13 @@
    ANSWER: <FILL or TODO>
 6. **Geography / segment** — Which market or segment first, then which next?
    ANSWER: <FILL or TODO>
+
+## Publication (optional — used by the `/publish` capstone)
+> `/publish` writes a methodology white paper and a first-person Substack post. These two
+> optional slots let you own the post's argument and voice; leave them blank for a neutral,
+> opinion-free account that just reports what the run showed.
+
+- **publication_thesis:** <OPTIONAL: the one-sentence argument/lesson the post should make, in
+  your words. Blank = no imposed lesson.>
+- **publication_voice:** <OPTIONAL: style guidance, e.g. "plainspoken, anti-hype, short
+  paragraphs". Blank = neutral and descriptive.>

@@ -17,8 +17,8 @@ Method:
 - Use Grep/Glob to cross-check this artifact against the others for contradictions and for
   evidence quietly invented to fill a Human Gate.
 - Apply the case's kill-shots from `candidate_risks`, plus the universal ones: services trap;
-  commodity-layer erosion; incumbent / foundation-lab follow; team credibility / procurement
-  wall; timing or enforcement slip; missing expansion curve; dead-equity; scope distraction.
+  commodity-layer erosion; incumbent or new-entrant follow; team credibility / procurement
+  wall; timing or why-now slip; missing expansion curve; dead-equity; scope distraction.
 - Reward honesty: a well-flagged `[NEEDS HUMAN INPUT]` is acceptable; a confident guess is not.
 - Cite evidence for every verdict: for each load-bearing claim you pass or fail, name the
   evidence — a source URL plus the figure or quote it confirms or refutes, or the cross-file

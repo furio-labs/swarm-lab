@@ -1,4 +1,6 @@
-# Claude Researcher — Business-Case Build + Challenge Swarm
+# Swarm Foundry — Business-Case Build + Challenge Swarm
+
+> Part of the **Market Swarm** product — and an open-source lab for agent-swarm experimentation.
 
 A drop-in `.claude/` scaffold that builds and red-teams a **VC-grade business case for any
 venture**, using a team of subagents with per-task model routing. You bring the idea and the
@@ -20,11 +22,11 @@ domain from it.
 1. Copy the **contents of this folder** into the **root of a git repo** (so that `.claude/`,
    `docs/`, and `CLAUDE.md` sit at the repo root).
 2. Open the repo in Claude Code: `claude`
-3. **Provide your business data** — either:
-   - Run `/new-case` — it interviews you, web-researches the domain, and drafts
-     `docs/business-model/00-CONTEXT.md` with sources for you to confirm; **or**
-   - Copy `docs/business-model/00-CONTEXT.template.md` to `00-CONTEXT.md` and fill every
-     `<FILL: …>` slot by hand.
+3. **Provide your business data** — run `/new-case`. It interviews you, web-researches the
+   domain, and drafts `docs/business-model/00-CONTEXT.md` with sources for you to confirm.
+   `/new-case` is the **only** supported way to start a case (it also resets the per-case token
+   ledger so each case is measured from zero). The `*.template.md` files are the interview's
+   field guide — don't hand-edit them into `00-CONTEXT.md`.
 4. **Answer the Human Gates** in `00-CONTEXT.md` before running anything that depends on them.
    Agents are forbidden from inventing these.
 5. Restart the session after adding/editing agent files (they load at session start).
@@ -41,7 +43,7 @@ domain from it.
 Outputs land in `docs/business-model/<ws-id>.md`, critiques in `<ws-id>.challenge.md`,
 progress in `STATUS.md`.
 
-## What you fill in (`00-CONTEXT.md`)
+## What `/new-case` captures (`00-CONTEXT.md`)
 The single data file carries the **domain frame** the agents interpolate:
 - the business + committed decisions + the wedge
 - product category, customer unit, segments/geographies + staging, why-now driver,
@@ -51,12 +53,13 @@ The single data file carries the **domain frame** the agents interpolate:
 
 ## Model routing (why each agent runs where it does)
 - **opus** — heavy reasoning / adversarial: ws3 (moat), ws5 (unit economics),
-  ws8 (financials), and the red-team. A weak skeptic passes weak assets, so the
-  challenger gets the strongest model.
-- **sonnet** — research+synthesis (ws1, ws2, ws4) and structured drafting
+  ws8 (financials), the red-team, and the publication-writer (capstone). A weak skeptic
+  passes weak assets, so the challenger gets the strongest model.
+- **sonnet** — research+synthesis (ws1, ws2, ws4, ws7) and structured drafting
   (ws6, ws9, ws11). Research agents carry WebSearch/WebFetch.
 - Cost lever: set `CLAUDE_CODE_SUBAGENT_MODEL` to change the default, or downgrade
-  ws9/ws11 to `haiku` to trim tokens. Expect ~7x token use vs single-thread.
+  ws9/ws11 to `haiku` to trim tokens. Expect several× the tokens of a single-threaded run
+  (`[ASSUMPTION]` — varies by case; cross-check with `/cost`).
 
 ## The one rule that makes this worth running
 Nothing is "done" until the **red-team-partner** has tried to kill it and failed, OR the
